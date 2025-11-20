@@ -1,6 +1,6 @@
 // app/api/links/route.ts
 import { NextResponse } from "next/server";
-import { query } from "../../../lib/db";
+import { query } from "../../lib/db";
 import { validateUrl, generateCode, CODE_REGEX } from "../../../lib/utils";
 
 export async function GET() {
