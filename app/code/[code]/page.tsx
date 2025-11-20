@@ -1,4 +1,5 @@
 // app/code/[code]/page.tsx
+import { query } from "../../../lib/db";
 
 export default async function StatsPage({ params }: any) {
   const code = params.code;
