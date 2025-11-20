@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS links (
+  code VARCHAR(8) PRIMARY KEY,
+  url TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  clicks BIGINT DEFAULT 0,
+  last_clicked TIMESTAMP WITH TIME ZONE,
+  deleted BOOLEAN DEFAULT FALSE
+);
+
+CREATE INDEX IF NOT EXISTS idx_links_deleted ON links (deleted);
